@@ -18,3 +18,14 @@ print("Dataset1 shape:", d1.shape)
 print("Dataset2 shape:", d2.shape)
 print(d1.head(), "\n")
 print(d2.head())
+# Shazid- Descriptive stats
+print(d1.describe())
+print(d2.describe())
+# Shazid- Distribution of risk-taking behaviour
+sns.countplot(x='risk', data=d1)
+plt.title("Bat behaviour: Risk-taking vs Risk-avoidance")
+plt.show()
+# Shazid- Risk vs Reward
+sns.countplot(x='risk', hue='reward', data=d1)
+plt.title("Risk vs Reward outcomes")
+plt.show()
